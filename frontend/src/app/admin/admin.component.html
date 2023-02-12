@@ -12,35 +12,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Whats your plan for weekend ?</td>
-        <td>Sleeping</td>
-        <td>Outing</td>
-        <td>Laundry</td>
-        <td>Party</td>
-        <td class="text-success">Active</td>
-        <td><button type="button" class="btn btn-primary btn-sm" disabled>Activate</button></td>
+
+      <tr *ngFor="let polls of pollData">
+        <th scope="row">{{polls.pollID}}</th>
+        <td>{{polls.pollQuestion}}</td>
+        <td>{{polls.optA}}</td>
+        <td>{{polls.optB}}</td>
+        <td>{{polls.optC}}</td>
+        <td>{{polls.optD}}</td>
+        <td class="text-success">{{polls.status}}</td>
+        <td><button type="button" class="btn btn-primary btn-sm" >Activate</button></td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Which part of India would you like to visit next ?</td>
-        <td>North India</td>
-        <td>South India</td>
-        <td>East India</td>
-        <td>West India</td>
-        <td class="text-info">In-active</td>
-        <td><button type="button" class="btn btn-primary btn-sm">Activate</button></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Which part of India would you like to visit next ?</td>
-        <td>North India</td>
-        <td>South India</td>
-        <td>East India</td>
-        <td>West India</td>
-        <td class="text-warning">Pending</td>
-        <td><button type="button" class="btn btn-primary btn-sm">Activate</button></td>
-      </tr>
+      
     </tbody>
   </table>

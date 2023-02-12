@@ -1,26 +1,31 @@
 <div class="container-fluid form_block" >
-    <form class="form_container">
+    <form class="form_container" [formGroup]="newPollData" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="question">Question</label>
-            <input type="text" class="form-control" id="question" placeholder="Enter question for the poll">
+            <input type="text" class="form-control" id="question" formControlName="question" placeholder="Enter question for the poll">
 
         </div>
         <div class="form-group">
             <label for="optionA">Option A</label>
-            <input type="text" class="form-control" id="optionA" placeholder="Enter optionA">
+            <input type="text" class="form-control" id="optionA" formControlName="optionA" placeholder="Enter optionA">
         </div>
         <div class="form-group">
             <label for="optionB">Option B</label>
-            <input type="text" class="form-control" id="optionB" placeholder="Enter optionB">
+            <input type="text" class="form-control" id="optionB" formControlName="optionB" placeholder="Enter optionB">
         </div>
         <div class="form-group">
             <label for="optionC">Option C</label>
-            <input type="text" class="form-control" id="optionC" placeholder="Enter optionC">
+            <input type="text" class="form-control" id="optionC" formControlName="optionC" placeholder="Enter optionC">
         </div>
         <div class="form-group">
             <label for="optionD">Option D</label>
-            <input type="text" class="form-control" id="optionD" placeholder="Enter optionD">
+            <input type="text" class="form-control" id="optionD" formControlName="optionD" placeholder="Enter optionD">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group">
+            <div *ngIf="submitted">
+                <p class="text-danger">Please enter all details</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </form>
 </div>
