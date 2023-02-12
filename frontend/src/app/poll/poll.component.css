@@ -144,3 +144,11 @@ body{
     width: 130px;
     display: flex;
 }
+
+.poll-option-box{
+    width: 100%;
+    height: 12px;
+    position: relative;
+    background: #111;
+    margin: 8px 0;
+}

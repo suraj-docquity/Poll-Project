@@ -4,28 +4,42 @@
         <div class="progress-box" id="optA" (click)="userResponse(1)" >
             <p>{{pollData.optA}}</p>
             <div class="progress-bar">
-                <span data="0%" class="percent-tag"></span>
+                <label class="progress-bar">{{option1}} %</label>
+                <input type="range" min="1" max="100" [attr.value]="option1" class="slider" id="myRange">
+                
+                <!-- <span  [attr.data]="option1"  class="percent-tag" ></span> -->
             </div>
         </div>
         <div class="progress-box" id="optB" (click)="userResponse(2)">
             <p>{{pollData.optB}}</p>
-            <div class="progress-bar">
-                <span data="0%" class="percent-tag"></span>
+            <div class="progress-bar ">
+                <label class="progress-bar">{{option2}} %</label>
+                <input type="range" min="1" max="100" [attr.value]="option2" class="slider" id="myRange">
+
+                <!-- <span data="70%" class="percent-tag"></span> -->
             </div>
         </div>
         <div class="progress-box" id="optC" (click)="userResponse(3)">
             <p>{{pollData.optC}}</p>
             <div class="progress-bar">
-                <span data="0%" class="percent-tag"></span>
+                <label class="progress-bar">{{option3}} %</label>
+                <input type="range" min="1" max="100" [attr.value]="option3" class="slider" id="myRange">
+
+                <!-- <span data="0%" class="percent-tag"></span> -->
             </div>
         </div>
         <div class="progress-box" id="optD" (click)="userResponse(4)">
             <p>{{pollData.optD}}</p>
             <div class="progress-bar">
-                <span data="0%" class="percent-tag"></span>
+                <label class="progress-bar">{{option4}} %</label>
+                <input type="range" min="1" max="100" [attr.value]="option4" class="slider" id="myRange"  >
+
+                <!-- <span data="0%" class="percent-tag"></span> -->
             </div>
         </div>
-        <h3>Total Votes : <span id="totalVotes"></span></h3>
+        <h3 *ngIf="totalVotes!=0">Total Votes : <span id="totalVotes">{{totalVotes}}</span></h3>
+
+        
     </div>
 
 </body>

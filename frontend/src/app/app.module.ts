@@ -12,6 +12,8 @@ import { CreatePollComponent } from './create-poll/create-poll.component';
 import { PollListComponent } from './poll-list/poll-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataService } from 'src/service/data-service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider'; 
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { DataService } from 'src/service/data-service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    MatSliderModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       {path: 'admin',component: AdminComponent,title:"Admin"},
@@ -34,7 +37,8 @@ import { DataService } from 'src/service/data-service';
       {path: 'create-poll',component: CreatePollComponent,title:"Create Poll"},
       {path: 'poll-list',component: PollListComponent,title:"Poll List"},
       {path: '', redirectTo: '/poll-list', pathMatch: 'full'},
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
