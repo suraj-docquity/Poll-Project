@@ -1,25 +1,25 @@
 <body>
     <div class="container">
         <h2>{{pollData.pollQuestion}}</h2>
-        <div class="progress-box" id="html">
+        <div class="progress-box" id="optA" (click)="userResponse(1)" >
             <p>{{pollData.optA}}</p>
             <div class="progress-bar">
                 <span data="0%" class="percent-tag"></span>
             </div>
         </div>
-        <div class="progress-box" id="css">
+        <div class="progress-box" id="optB" (click)="userResponse(2)">
             <p>{{pollData.optB}}</p>
             <div class="progress-bar">
                 <span data="0%" class="percent-tag"></span>
             </div>
         </div>
-        <div class="progress-box" id="javascript">
+        <div class="progress-box" id="optC" (click)="userResponse(3)">
             <p>{{pollData.optC}}</p>
             <div class="progress-bar">
                 <span data="0%" class="percent-tag"></span>
             </div>
         </div>
-        <div class="progress-box" id="react">
+        <div class="progress-box" id="optD" (click)="userResponse(4)">
             <p>{{pollData.optD}}</p>
             <div class="progress-bar">
                 <span data="0%" class="percent-tag"></span>
